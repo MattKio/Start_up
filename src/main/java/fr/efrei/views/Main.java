@@ -6,6 +6,8 @@ import fr.efrei.factory.NameFactory;
 import fr.efrei.factory.RaceFactory;
 import fr.efrei.repository.RaceRepository;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static RaceRepository repository = RaceRepository.getRepository();
@@ -20,8 +22,6 @@ public class Main {
     }
     public static void main(String[] args) {
 
-
-        System.out.println("OOOOOOOOOOOOOOOO");
         RaceRepository repository = RaceRepository.getRepository();
         loadObject();
         repository.getAll();
@@ -29,8 +29,8 @@ public class Main {
         Name name2 = NameFactory.createName("Emma", "Simone", "Deste");
         Name error = NameFactory.createName("", null);
 
-        System.out.println(name1);
-        System.out.println(name2);
-        System.out.println(error);
+        for (Name name : Arrays.asList(name1, name2, error)) {
+            System.out.println(name);
+        }
     }
 }
