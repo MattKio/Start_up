@@ -31,6 +31,13 @@ public class Race {
                 '}';
     }
 
+    public boolean isEmpty (){
+        if (id == null && description == null){
+            return true;
+        }
+        return false;
+    }
+
     public static class Builder{
         private String ID;
         private String description;
