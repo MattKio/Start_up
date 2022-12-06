@@ -34,6 +34,15 @@ public class Name {
                 '}';
     }
 
+    public boolean isEmpty() {
+        if (firstName == null && middleName == null && lastName == null)
+        {
+          return true;
+        }
+
+        return false;
+    }
+
     public static class Builder {
         private String firstName;
         private String middleName;

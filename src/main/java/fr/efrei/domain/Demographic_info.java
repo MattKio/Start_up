@@ -4,7 +4,6 @@ public class Demographic_info {
     private Race race;
     private String sex;
 
-    private Demographic_info (){}
 
     private Demographic_info (Builder builder) {
         this.race = builder.race;

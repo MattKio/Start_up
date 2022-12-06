@@ -1,7 +1,6 @@
 package fr.efrei.repository;
 
 import fr.efrei.domain.Race;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +14,7 @@ public class RaceRepository implements IRaceRepository {
     }
 
     public static RaceRepository getRepository() {
+
         if (repository == null)
         {
             return new RaceRepository();
