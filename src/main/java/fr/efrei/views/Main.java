@@ -1,16 +1,16 @@
 package fr.efrei.views;
 
+import fr.efrei.domain.Demographic_info;
 import fr.efrei.domain.Employee;
 import fr.efrei.domain.Name;
 import fr.efrei.domain.Race;
+import fr.efrei.factory.Demographic_infoFactory;
 import fr.efrei.factory.EmployeeFactory;
 import fr.efrei.factory.NameFactory;
 import fr.efrei.factory.RaceFactory;
 import fr.efrei.repository.RaceRepository;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Arrays;
-import java.util.Objects;
+
 
 public class Main {
 
@@ -23,30 +23,40 @@ public class Main {
         repository.create(race1);
         repository.create(race2);
         repository.create(race3);
+
+        for (Race r :
+                Arrays.asList(race1, race2, race3)) {
+            System.out.println(r);
+        }
     }
     public static void main(String[] args) {
 
-        RaceRepository repository = RaceRepository.getRepository();
-        loadObject();
-        repository.getAll();
+        //RaceRepository repository = RaceRepository.getRepository();
+        //loadObject();
+        //repository.getAll();
         Name name1 = NameFactory.createName("Matthieu","Freire");
-        //System.out.println(name1);
-        Name name2 = NameFactory.createName("Emma", "Simone", "Deste");
+        Name name2 = NameFactory.createName("Nassim", "Abbou");
+        Name name3 = NameFactory.createName("Jules", "Roger", "Logerot");
         //Name error = NameFactory.createName("", null);
-        Name name3 = NameFactory.createName("Freire", "STP", "aller");
 
-        for (Name name : Arrays.asList(name1, name2, name3)) {
-            System.out.println(1);
+        /*for (Name name : Arrays.asList(name1, name2, name3)) {
             System.out.println(name);
+        }*/
+        Race race1 = RaceFactory.createRace("Indian");
+        Race race2 = RaceFactory.createRace("White");
+        Race race3 = RaceFactory.createRace("SpaceMan");
+
+        Demographic_info demographicInfo = Demographic_infoFactory.createDemo_info(race1, "male");
+
+        Employee employee1 = EmployeeFactory.createEmployee(name1);
+        Employee employee2 = EmployeeFactory.createEmployee(name2);
+        Employee employee3 = EmployeeFactory.createEmployee(name3, demographicInfo);
+
+        for (Employee e : Arrays.asList(employee1, employee2, employee3)) {
+            System.out.println(e);
+
         }
 
-        Employee employee1 = EmployeeFactory.createEmployee("1", name1);
-        Employee employee2 = EmployeeFactory.createEmployee("2", name2);
-
-        for (Employee employer :
-                Arrays.asList(employee1, employee2)) {
-            System.out.println(employer);
-        }
 
     }
 }
