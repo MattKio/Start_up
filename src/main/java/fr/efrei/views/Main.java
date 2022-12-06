@@ -1,12 +1,16 @@
 package fr.efrei.views;
 
+import fr.efrei.domain.Employee;
 import fr.efrei.domain.Name;
 import fr.efrei.domain.Race;
+import fr.efrei.factory.EmployeeFactory;
 import fr.efrei.factory.NameFactory;
 import fr.efrei.factory.RaceFactory;
 import fr.efrei.repository.RaceRepository;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Main {
 
@@ -26,11 +30,23 @@ public class Main {
         loadObject();
         repository.getAll();
         Name name1 = NameFactory.createName("Matthieu","Freire");
+        //System.out.println(name1);
         Name name2 = NameFactory.createName("Emma", "Simone", "Deste");
-        Name error = NameFactory.createName("", null);
+        //Name error = NameFactory.createName("", null);
+        Name name3 = NameFactory.createName("Freire", "STP", "aller");
 
-        for (Name name : Arrays.asList(name1, name2, error)) {
+        for (Name name : Arrays.asList(name1, name2, name3)) {
+            System.out.println(1);
             System.out.println(name);
         }
+
+        Employee employee1 = EmployeeFactory.createEmployee("1", name1);
+        Employee employee2 = EmployeeFactory.createEmployee("2", name2);
+
+        for (Employee employer :
+                Arrays.asList(employee1, employee2)) {
+            System.out.println(employer);
+        }
+
     }
 }

@@ -13,7 +13,6 @@ public class EmployeeFactory {
             return null;
         }
 
-        Employee employee = new Employee.Builder().setEmpNumber(empNumberId).setName(name).build();
-        return employee;
+        return new Employee.Builder().setEmpNumber(empNumberId).setName(name).build();
     }
 }

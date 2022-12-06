@@ -14,6 +14,7 @@ public class RaceRepository implements IRaceRepository {
     }
 
     public static RaceRepository getRepository() {
+
         if (repository == null)
         {
             return new RaceRepository();
