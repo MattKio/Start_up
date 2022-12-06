@@ -5,6 +5,8 @@ import fr.efrei.util.Helper;
 
 public class EmploieFactory {
 
+
+
     public static Emploie createEmploie (String Title){
         if (Helper.isNullOrEmpty(Title)){
             return null;
