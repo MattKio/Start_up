@@ -36,6 +36,7 @@ public class Poste{
                 '}';
     }
 
+
     public static class Builder {
         private String CodePostal;
         private String PosteName;

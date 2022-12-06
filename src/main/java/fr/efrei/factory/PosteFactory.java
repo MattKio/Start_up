@@ -13,3 +13,4 @@ public class PosteFactory {
         return poste;
     }
 }
+

@@ -14,8 +14,7 @@ public class Emploie extends Poste{
     }
 
     @Override
-    public String toString() {
-        return "Emploie{" +
+    public String toString() {return "Emploie{" +
                 "Title='" + Title + '\'' +
                 '}';
     }
