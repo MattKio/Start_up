@@ -8,54 +8,56 @@ import fr.efrei.factory.Demographic_infoFactory;
 import fr.efrei.factory.EmployeeFactory;
 import fr.efrei.factory.NameFactory;
 import fr.efrei.factory.RaceFactory;
+import fr.efrei.repository.NameRepository;
 import fr.efrei.repository.RaceRepository;
 import java.util.Arrays;
 
 
 public class Main {
 
-    public static RaceRepository repository = RaceRepository.getRepository();
+    public static String male = "♂";
+    public static String female = "♀";
+    public static RaceRepository raceRepository = RaceRepository.getRepository();
+    public static NameRepository nameRepository = NameRepository.getRepository();
 
-    public static void loadObject(){
+    public static void loadObjectRace(){
         Race race1 = RaceFactory.createRace("Indian");
         Race race2 = RaceFactory.createRace("White");
         Race race3 = RaceFactory.createRace("SpaceMan");
-        repository.create(race1);
-        repository.create(race2);
-        repository.create(race3);
-
-        for (Race r :
-                Arrays.asList(race1, race2, race3)) {
-            System.out.println(r);
-        }
+        raceRepository.create(race1);
+        raceRepository.create(race2);
+        raceRepository.create(race3);
     }
-    public static void main(String[] args) {
 
-        //RaceRepository repository = RaceRepository.getRepository();
-        //loadObject();
-        //repository.getAll();
+    public static void loadObjectName(){
         Name name1 = NameFactory.createName("Matthieu","Freire");
         Name name2 = NameFactory.createName("Nassim", "Abbou");
         Name name3 = NameFactory.createName("Jules", "Roger", "Logerot");
-        //Name error = NameFactory.createName("", null);
+        nameRepository.create(name1);
+        nameRepository.create(name2);
+        nameRepository.create(name3);
+    }
+
+
+    public static void main(String[] args) {
+
+
+        loadObjectRace();
+        loadObjectName();
+
+        Demographic_info demographicInfo1 = Demographic_infoFactory.createDemo_info(raceRepository.getIndex(0), male);
+        Demographic_info demographicInfo2 = Demographic_infoFactory.createDemo_info(raceRepository.getIndex(1), female);
+
+        Employee employee1 = EmployeeFactory.createEmployee(nameRepository.getIndex(0), demographicInfo1);
+        Employee employee2 = EmployeeFactory.createEmployee(nameRepository.getIndex(1), demographicInfo2);
+
+        System.out.println(employee1);
+        System.out.println(employee2);
 
         /*for (Name name : Arrays.asList(name1, name2, name3)) {
             System.out.println(name);
         }*/
-        Race race1 = RaceFactory.createRace("Indian");
-        Race race2 = RaceFactory.createRace("White");
-        Race race3 = RaceFactory.createRace("SpaceMan");
 
-        Demographic_info demographicInfo = Demographic_infoFactory.createDemo_info(race1, "male");
-
-        Employee employee1 = EmployeeFactory.createEmployee(name1);
-        Employee employee2 = EmployeeFactory.createEmployee(name2);
-        Employee employee3 = EmployeeFactory.createEmployee(name3, demographicInfo);
-
-        for (Employee e : Arrays.asList(employee1, employee2, employee3)) {
-            System.out.println(e);
-
-        }
 
 
     }

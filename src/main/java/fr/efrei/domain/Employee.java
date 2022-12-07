@@ -28,10 +28,10 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee [" +
-                "EmpNumber : " + empNumber
-                + name +
-                " | Demographic Info : " + demographicInfo +
+        return "Employee = \n[" +
+                "Employee Number : " + empNumber
+                + "\n["+ name +
+                "[" + demographicInfo +
                 ']';
     }
 

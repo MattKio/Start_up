@@ -27,11 +27,11 @@ public class Name {
 
     @Override
     public String toString() {
-        return "Name{" +
-                "firstName='" + firstName + '\'' +
-                ", middleName='" + middleName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+        return "NAME {" +
+                " Firstname : '" + firstName + '\'' +
+                " | Middlename : '" + middleName + '\'' +
+                " | Lastname='" + lastName + '\'' +
+                "}\n";
     }
 
     public boolean isEmpty() {
@@ -66,8 +66,5 @@ public class Name {
         public Name build(){
             return new Name(this);
         }
-
-
-
     }
 }

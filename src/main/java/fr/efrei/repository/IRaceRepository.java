@@ -7,9 +7,7 @@ import java.util.List;
 
 public interface IRaceRepository extends IRepository<Race, String> {
 
-//    create, read, update, delete
-
-    public List<Race> getAll();
-
+    List<Race> getAll();
+    Race getIndex(int i);
 
 }

@@ -25,9 +25,8 @@ public class Race {
 
     @Override
     public String toString() {
-        return "Race{" +
-                "ID='" + id + '\'' +
-                ", description='" + description + '\'' +
+        return  "ID Race : '" + id + '\'' +
+                " | Description'" + description + '\'' +
                 '}';
     }
 

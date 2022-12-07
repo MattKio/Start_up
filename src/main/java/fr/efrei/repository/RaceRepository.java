@@ -9,7 +9,7 @@ public class RaceRepository implements IRaceRepository {
     private static RaceRepository repository = null;
     private List<Race> raceDB = null;
 
-    private RaceRepository() {
+    private RaceRepository()     {
         raceDB = new ArrayList<Race>();
     }
 
@@ -77,6 +77,11 @@ public class RaceRepository implements IRaceRepository {
     @Override
     public List<Race> getAll() {
         return raceDB;
+    }
+
+    public Race getIndex(int i)
+    {
+        return raceDB.get(i);
     }
 
 }

@@ -20,9 +20,8 @@ public class Demographic_info {
 
     @Override
     public String toString() {
-        return "Demographic_info{" +
-                "race=" + race +
-                ", sex='" + sex + '\'' +
+        return "Demographic_info { " +
+                race + " | Sex='" + sex + '\'' +
                 '}';
     }
 
