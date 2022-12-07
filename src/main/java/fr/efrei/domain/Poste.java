@@ -1,22 +1,22 @@
 package fr.efrei.domain;
 
 public class Poste{
-    private String CodePostal;
+    private String CodePoste;
     private String PosteName;
     private boolean Statut;
 
     public Poste (){}
 
     public Poste (Builder builder) {
-        this.CodePostal = builder.CodePostal;
+        this.CodePoste = builder.CodePoste;
         this.PosteName = builder.PosteName;
         this.Statut = builder.Statut;
     }
 
 
 
-    public String getCodePostal() {
-        return CodePostal;
+    public String getCodePoste() {
+        return CodePoste;
     }
 
     public String getPosteName() {
@@ -30,7 +30,7 @@ public class Poste{
     @Override
     public String toString() {
         return "Poste{" +
-                "CodePostal='" + CodePostal + '\'' +
+                "CodePostal='" + CodePoste + '\'' +
                 ", PosteName='" + PosteName + '\'' +
                 ", Statut='" + Statut + '\'' +
                 '}';
@@ -38,12 +38,12 @@ public class Poste{
 
 
     public static class Builder {
-        private String CodePostal;
+        private String CodePoste;
         private String PosteName;
         private boolean Statut;
 
-        public Builder setCodePostal(String codePostal) {
-            this.CodePostal = codePostal;
+        public Builder setCodePostal(String codePoste) {
+            this.CodePoste = codePoste;
             return this;
         }
 
@@ -58,7 +58,7 @@ public class Poste{
         }
 
         public Builder copy (Poste poste){
-            this.CodePostal = poste.CodePostal;
+            this.CodePoste = poste.CodePoste;
             this.PosteName = poste.PosteName;
             this.Statut = poste.Statut;
             return this;

@@ -28,7 +28,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee = \n[" +
+        return "\nEmployee = \n[" +
                 "Employee Number : " + empNumber
                 + "\n["+ name +
                 "[" + demographicInfo +

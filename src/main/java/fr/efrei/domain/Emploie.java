@@ -1,6 +1,6 @@
 package fr.efrei.domain;
 
-public class Emploie extends Poste{
+public class Emploie{
     private String Title;
 
     public Emploie (){}
