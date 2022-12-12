@@ -17,8 +17,17 @@ public class Emploie{
 
     @Override
     public String toString() {return "Emploie{" +
-                "Title='" + Title + '\'' +
-                '}';
+                "Title : '" + Title + '\'' +
+                "}\n";
+    }
+
+    public boolean isEmpty() {
+        if (Title == null)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public static class Builder {

@@ -1,4 +1,4 @@
-package fr.efrei.repository;
+package fr.efrei.notuse;
 
 import fr.efrei.domain.Name;
 

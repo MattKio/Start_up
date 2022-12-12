@@ -1,13 +1,11 @@
 package fr.efrei.repository;
 
-import fr.efrei.domain.Demographic_info;
-import fr.efrei.domain.Emploie;
 import fr.efrei.domain.Poste;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PosteRepository implements IPosteRepository{
+public class PosteRepository implements IPosteRepository {
     private static PosteRepository repository = null;
     private List<Poste> PosteDB = null;
 

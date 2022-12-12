@@ -76,6 +76,6 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public List<Employee> getAll() {
-        return null;
+        return employeesDB;
     }
 }

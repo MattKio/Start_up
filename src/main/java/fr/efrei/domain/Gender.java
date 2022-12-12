@@ -1,13 +1,13 @@
 package fr.efrei.domain;
 
-public class Race {
+public class Gender {
     private String id;
     private String description;
 
-    private Race() {}
+    private Gender() {}
 
-    private Race(Builder builder) {
-        this.id = builder.ID;
+    private Gender(Builder builder) {
+        this.id = builder.id;
         this.description = builder.description;
     }
 
@@ -23,7 +23,7 @@ public class Race {
 
     @Override
     public String toString() {
-        return  id + '\'' +
+        return  "ID Gender : '" + id + '\'' +
                 " | Description'" + description + '\'' +
                 '}';
     }
@@ -36,29 +36,29 @@ public class Race {
     }
 
     public static class Builder{
-        private String ID;
+        private String id;
         private String description;
 
 
-        public Builder setID(String ID) {
-            this.ID = ID;
+        public Gender.Builder setId(String id) {
+            this.id = id;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Gender.Builder setDescription(String description) {
             this.description = description;
             return this;
         }
 
-        public Builder copy(Race race) {
+        public Gender.Builder copy(Gender sex) {
 
-            this.ID = race.id;
-            this.description = race.description;
+            this.id = sex.id;
+            this.description = sex.description;
             return this;
         }
 
-        public Race build(){
-            return new Race(this);
+        public Gender build(){
+            return new Gender(this);
 
         }
     }

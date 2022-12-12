@@ -40,7 +40,7 @@ public class RaceRepository implements IRaceRepository {
     @Override
     public Race read(String s) {
         for (Race r: raceDB){
-            if (r.getId().equals(s))
+            if (r.getDescription().equals(s))
             {
                 return r;
             }

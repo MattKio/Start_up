@@ -16,4 +16,13 @@ public class EmploieFactory {
         return emploie;
 
     }
+
+    public static Emploie createEmploie(Emploie em) {
+        if (Helper.isNullOrEmpty(em.getTitle())){
+            return null;
+        }
+
+        Emploie emploie = new Emploie.Builder().setTitle(em.getTitle()).build();
+        return emploie;
+    }
 }

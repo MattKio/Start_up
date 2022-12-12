@@ -1,12 +1,11 @@
-package fr.efrei.repository;
+package fr.efrei.notuse;
 
-import fr.efrei.domain.Demographic_info;
 import fr.efrei.domain.Identity_Type;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Identity_TypeRepository implements IIdentity_TypeRepository{
+public class Identity_TypeRepository implements IIdentity_TypeRepository {
     private static Identity_TypeRepository repository = null;
     private List<Identity_Type> identityDB = null;
 
@@ -15,7 +14,7 @@ public class Identity_TypeRepository implements IIdentity_TypeRepository{
     }
 
     public static Identity_TypeRepository getRepository() {
-        if (repository == null){
+        if (repository == null) {
             return new Identity_TypeRepository();
         }
         return repository;
@@ -23,19 +22,16 @@ public class Identity_TypeRepository implements IIdentity_TypeRepository{
 
     public Identity_Type create(Identity_Type identity) {
         boolean success = identityDB.add(identity);
-        if (success)
-        {
+        if (success) {
             return identity;
-        }
-        else
+        } else
             return null;
     }
 
     @Override
     public Identity_Type read(String s) {
-        for (Identity_Type i: identityDB){
-            if (i.getNic().equals(s) || i.getPasseport().equals(s))
-            {
+        for (Identity_Type i : identityDB) {
+            if (i.getNic().equals(s) || i.getPasseport().equals(s)) {
                 return i;
             }
         }
@@ -59,8 +55,7 @@ public class Identity_TypeRepository implements IIdentity_TypeRepository{
     public boolean delete(String s) {
 
         Identity_Type identityToDelete = read(s);
-        if (identityToDelete == null)
-        {
+        if (identityToDelete == null) {
             return false;
         }
 

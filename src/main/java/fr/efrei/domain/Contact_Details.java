@@ -4,7 +4,7 @@ public class Contact_Details {
 
     private String phone_number;
     private String email;
-    private  String homeNumber;
+    private String homeNumber;
 
     public Contact_Details() {
     }
@@ -30,10 +30,10 @@ public class Contact_Details {
     @Override
     public String toString() {
         return "Contact_Details{" +
-                "phone_number='" + phone_number + '\'' +
-                ", email='" + email + '\'' +
-                ", homeNumber='" + homeNumber + '\'' +
-                '}';
+                "Phone Number :'" + phone_number + '\'' +
+                ", Email : " + email + '\'' +
+                ", Home Number : '" + homeNumber + '\'' +
+                "}\n";
     }
 
     public boolean isEmpty (){

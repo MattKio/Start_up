@@ -23,10 +23,10 @@ public class Identity_Type {
 
     @Override
     public String toString() {
-        return "Identity_Type{" +
-                "passeport='" + passeport + '\'' +
-                ", nic='" + nic + '\'' +
-                '}';
+        return "Identity_Type {" +
+                " Passeport  : '" + passeport + '\'' +
+                "| NIC : '" + nic + '\'' +
+                "}\n";
     }
 
     public boolean isEmpty (){

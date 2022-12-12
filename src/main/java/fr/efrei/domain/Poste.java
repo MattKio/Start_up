@@ -30,10 +30,19 @@ public class Poste{
     @Override
     public String toString() {
         return "Poste{" +
-                "CodePostal='" + CodePoste + '\'' +
-                ", PosteName='" + PosteName + '\'' +
-                ", Statut='" + Statut + '\'' +
-                '}';
+                "Code Postal : '" + CodePoste + '\'' +
+                "| PosteName : '" + PosteName + '\'' +
+                "| Statut : '" + Statut + '\'' +
+                "}\n";
+    }
+
+    public boolean isEmpty() {
+        if (CodePoste == null && PosteName == null)
+        {
+            return true;
+        }
+
+        return false;
     }
 
 

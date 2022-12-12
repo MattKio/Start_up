@@ -1,11 +1,11 @@
-package fr.efrei.repository;
+package fr.efrei.notuse;
 
 import fr.efrei.domain.Demographic_info;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Demographic_infoRepository implements IDemographic_infoRepository{
+public class Demographic_infoRepository implements IDemographic_infoRepository {
     private static Demographic_infoRepository repository = null;
     private List<Demographic_info> demoDB = null;
 
@@ -33,7 +33,7 @@ public class Demographic_infoRepository implements IDemographic_infoRepository{
     @Override
     public Demographic_info read(String s) {
         for (Demographic_info d: demoDB){
-            if (d.getRace().getId().equals(s))
+            if (d.getRace().getDescription().equals(s))
             {
                 return d;
             }

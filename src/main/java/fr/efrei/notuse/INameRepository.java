@@ -1,6 +1,7 @@
-package fr.efrei.repository;
+package fr.efrei.notuse;
 
 import fr.efrei.domain.Name;
+import fr.efrei.repository.IRepository;
 
 import java.util.List;
 

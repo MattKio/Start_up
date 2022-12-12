@@ -2,7 +2,7 @@ package fr.efrei.domain;
 
 public class Demographic_info {
     private Race race;
-    private String sex;
+    private Gender sex;
 
 
     private Demographic_info (Builder builder) {
@@ -14,15 +14,15 @@ public class Demographic_info {
         return race;
     }
 
-    public String getSex() {
+    public Gender getSex() {
         return sex;
     }
 
     @Override
     public String toString() {
-        return "Demographic_info { " +
+        return "Demographic_info { Race=" +
                 race + " | Sex='" + sex + '\'' +
-                '}';
+                "}\n";
     }
 
     public boolean isEmpty (){
@@ -34,14 +34,14 @@ public class Demographic_info {
 
     public static class Builder {
         private Race race;
-        private String sex;
+        private Gender sex;
 
         public Builder setRace(Race race) {
             this.race = race;
             return this;
         }
 
-        public Builder setSex(String sex) {
+        public Builder setSex(Gender sex) {
             this.sex = sex;
             return this;
         }
